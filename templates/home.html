@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Careers Website</title>
+        <title>Careers Website</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <style>
-            h1 {
-                font-size: 40px;
-                font-family:'Nunito', sans-serif;
-                font-weight:normal;
-                color:#000000;
-                text-align: center;
-            }
             #banner {
-                width: 100%;
                 height: 360px;
+                width: 100%;
                 object-fit: cover;
-            }
-            h2 {font-size: 32px;
-                font-family:'Lato', sans-serif;
-                font-weight: normal;
-                color:#767775;
-                text-align: center;
-            }
-            .bodytext { font-size: 14px;
-                font-family:'Lato', sans-serif;
-                font-weight: normal;
-                color:#050505;
-                text-align: center;
-
-            }
-            #container{
-                max-width: 720px;
-                margin:0 auto 0 auto;
             }
         </style>
     </head>
     <body>
-        <div id="container">
-            <h1>Careers Website</h1>
-            <img id="banner" src="http://127.0.0.1:5000/static/banner.jpg">
-            <h2>About</h2>
-            <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h2>Open Positions</h2>
-            <p class="bodytext"> TODO -Show the jobs here</p>
-            <div style="text-align: center;">
-                <button>Contact Us</button>
-                <p>Copyright 2024, MW</p>
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">Careers Website</h1>
+            <img class="img-responsive" id="banner" src="http://127.0.0.1:5000/static/banner.jpg">
+            <h2 class="text-center mt-2 mb-4">About</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+            <p> 
+                <div>
+                    {% for job in jobs %}
+                    {%include 'jobitem.html'%}
+                    {% endfor %}
+                </div>
+            </p>
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg">Contact Us</button>
+                <p class="mt-4">Copyright 2024, MW</p>
             </div>
         </div>
     </body>
