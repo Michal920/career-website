@@ -15,16 +15,16 @@ JOBS=[
      'salary': 'Rs.15,000,000'
      },
      { 
-         'id':3,
-        'title': 'Frontend Engineer',
-        'location': 'Remote',
-        'salary': 'Rs.12,000,000'
-        },
-        {
-        'id':4,
-        'title': 'Backed Engineer',
-        'location': 'San Francisco, USA',
-        'salary': '$120,000'
+    'id':3,
+    'title': 'Frontend Engineer',
+    'location': 'Remote',
+    'salary': 'Rs.12,000,000'
+    },
+    {
+    'id':4,
+    'title': 'Backed Engineer',
+    'location': 'San Francisco, USA',
+    'salary': '$150,000'
         }
 ]
 
